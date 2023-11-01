@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        "space-grotesk": ['var(--font-space-grotesk)'],
+      },
       colors: {
         'zo-primary': '#FFFFFF',
         'zo-secondary': '#5A5A5A',

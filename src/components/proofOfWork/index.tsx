@@ -8,7 +8,6 @@ const Laundry = (props: any) => {
   // const [uploadError, setuploadError] = useState<any>(null);
 
   const uploadLaundry = (e: any) => {
-    console.log("🚀 ~ file: index.tsx:11 ~ uploadLaundry ~ e:", e)
     const file = e.target.files[0];
 
     if (file) {
