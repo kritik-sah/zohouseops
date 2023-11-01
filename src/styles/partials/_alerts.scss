@@ -1,0 +1,11 @@
+.alert-success{
+    background-color: #66DF48 !important;
+    color: #202020 !important;
+    border-radius: 0px;
+    max-width: 326px;
+    bottom: 100px;
+    right:-25px;
+    .Toastify__close-button{
+        display: none;
+    }
+}
