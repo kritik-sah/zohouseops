@@ -67,7 +67,7 @@ const Task = (props: any) => {
         destroyOnClose={true}
         className={`${spaceGrotesk.className} !bg-zo-dark`}
       >
-        <div className="flex items-center justify-between w-full mt-8 lg:mt-0">
+        <div className="flex items-center justify-between w-full mt-12 lg:mt-0">
           <div className="h-8 w-8 relative" onClick={() => closeTaskInfo()}>
             <Image src="/assets/svgs/leftArrow.svg" alt="Room" layout="fill" />
           </div>

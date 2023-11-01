@@ -4,7 +4,7 @@ import { HiOutlineUserCircle } from "react-icons/hi";
 
 const LowerNav = () => {
   return (
-    <div className="fixed bottom-0 w-full max-w-sm bg-[#121212] p-6 border-t border-[#202020]">
+    <div className="fixed bottom-0 w-full bg-[#121212] p-6 border-t border-[#202020]">
         <div className="flex w-full gap-6 items-center justify-around text-2xl">
           <MdOutlineCheckBox className="text-[#A7CD43]"/>
           <MdChatBubbleOutline className="text-white" />

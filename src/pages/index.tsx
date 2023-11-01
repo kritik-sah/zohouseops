@@ -24,7 +24,7 @@ export default function Home() {
     <main
       className={`${spaceGrotesk.className} flex items-center justify-center`}
     >
-      <div className="relative min-h-screen w-full max-w-sm bg-zo-dark">
+      <div className="relative min-h-screen w-full bg-zo-dark">
         <div className="p-6 border-b border-zo-stroke">
           <h1 className="text-zo-primary text-xl">Hello Hemant!</h1>
           <p className="text-zo-secondary text-sm my-2">
