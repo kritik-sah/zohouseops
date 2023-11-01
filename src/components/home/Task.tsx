@@ -41,9 +41,9 @@ const Task = (props: any) => {
         }  w-full space-y-6 p-6`}
       >
         <div className="flex items-start justify-between gap-6">
-          <h3 className="text-lg text-zo-primary">{title}</h3>
+          <h3 className="text-base text-zo-primary">{title}</h3>
           {!completed ? (
-            <span className="text-lg text-zo-highlight">
+            <span className="text-sm text-zo-highlight">
               {inprogress ? "Finish" : "Start"}
             </span>
           ) : null}
@@ -77,10 +77,10 @@ const Task = (props: any) => {
           </div>
         </div>
         <div className="">
-          <h2 className="text-zo-primary text-3xl my-6">
+          <h2 className="text-zo-primary text-2xl my-6">
             Deliver Towels in townsville
           </h2>
-          <p className="text-zo-primary text-xl">
+          <p className="text-zo-primary text-base">
             Please pick 2 fresh towels from laundry area and deliver it to
             mentioned room.
           </p>

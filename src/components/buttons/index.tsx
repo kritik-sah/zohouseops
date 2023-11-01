@@ -5,7 +5,7 @@ const Button = (props: any) => {
   return (
     <button
       onClick={onClick}
-      className="bg-zo-primary w-full font-semibold text-xl px-16 py-4 text-zo-stroke"
+      className="bg-zo-primary w-full font-semibold text-base px-16 py-4 text-zo-stroke"
     >
       {text}
     </button>

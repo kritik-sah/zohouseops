@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Seprator = () => {
+const Seprator = (props: any) => {
   return (
-    <div className="w-[80%] border-b border-[#202020]"></div>
+    <div className={`w-[80%] border-b ${props?.type === "black"? "border-zo-dark" :"border-zo-stroke"}`}></div>
   )
 }
 
