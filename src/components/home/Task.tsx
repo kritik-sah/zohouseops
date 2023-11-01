@@ -62,7 +62,7 @@ const Task = (props: any) => {
         width={500}
         onClose={closeTaskInfo}
         open={openTaskInfo}
-        height={"100vh"}
+        height={"98vh"}
         closable={false}
         destroyOnClose={true}
         className={`${spaceGrotesk.className} !bg-zo-dark`}
