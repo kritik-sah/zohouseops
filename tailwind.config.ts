@@ -8,10 +8,17 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        'zo-primary': '#FFFFFF',
+        'zo-secondary': '#5A5A5A',
+        'zo-dark': '#121212',
+        'zo-stroke': '#202020',
+        'zo-highlight': '#CFFF50',
+        'zo-green': '#66DF48',
+        'zo-green-dark': '#293329',
+        'zo-yellow': '#FFD600',
+        'zo-orange': '#FF9E4C',
+        'zo-orange-dark': '#332D29',
       },
     },
   },

@@ -1,5 +1,6 @@
 import Task from "@/components/home/Task";
 import LowerNav from "@/components/navs/LowerNav";
+import Seprator from "@/components/separator";
 import { Drawer } from "antd";
 import { Space_Grotesk } from "next/font/google";
 import { useState } from "react";
@@ -23,10 +24,10 @@ export default function Home() {
     <main
       className={`${spaceGrotesk.className} flex items-center justify-center`}
     >
-      <div className="relative min-h-screen w-full max-w-sm bg-[#121212]">
-        <div className="p-6 border-b border-[#404040]">
-          <h1 className="text-white text-xl">Hello Hemant!</h1>
-          <p className="text-[#5f5f5f] text-sm my-2">
+      <div className="relative min-h-screen w-full max-w-sm bg-zo-dark">
+        <div className="p-6 border-b border-zo-stroke">
+          <h1 className="text-zo-primary text-xl">Hello Hemant!</h1>
+          <p className="text-zo-secondary text-sm my-2">
             You started shift at 8:12 AM
           </p>
         </div>
@@ -34,28 +35,28 @@ export default function Home() {
         <div className="p-6 min-h-screen overflow-y-scroll overflow-x-hidden">
           {working ? (
             <>
-              <h2 className="text-white text-2xl">Today&apos;s Task</h2>
+              <h2 className="text-zo-primary text-2xl">Today&apos;s Task</h2>
 
               <div className="my-6 flex flex-col gap-1">
-                <div className="bg-[#FED602] w-full px-6 py-4 font-medium text-[#262626]">
+                <div className="bg-zo-yellow w-full px-6 py-4 font-medium text-zo-stroke">
                   🔥 Event started, Finish URGENT task
                 </div>
-                <Task />
-                <Task urgent={true} />
-                <Task inprogress={true} />
-                <Task inprogress={true} urgent={true} />
-                <Task inprogress={true} urgent={true} completed={true} />
-                <Task inprogress={true} urgent={true} completed={true} />
-                <Task inprogress={true} urgent={true} completed={true} />
-                <Task inprogress={true} urgent={true} completed={true} />
-                <Task inprogress={true} urgent={true} completed={true} />
-                <Task inprogress={true} urgent={true} completed={true} />
+                <Task title="Wash Dishes in Kitchen" from="GK"/>
+                <Task title="Wash Dishes in Kitchen" from="GK" urgent={true} />
+                <Task title="Wash Dishes in Kitchen" from="GK" inprogress={true} />
+                <Task title="Wash Dishes in Kitchen" from="GK" inprogress={true} urgent={true} />
+                <Task title="Wash Dishes in Kitchen" from="GK" inprogress={true} urgent={true} completed={true} />
+                <Task title="Wash Dishes in Kitchen" from="GK" inprogress={true} urgent={true} completed={true} />
+                <Task title="Wash Dishes in Kitchen" from="GK" inprogress={true} urgent={true} completed={true} />
+                <Task title="Wash Dishes in Kitchen" from="GK" inprogress={true} urgent={true} completed={true} />
+                <Task title="Wash Dishes in Kitchen" from="GK" inprogress={true} urgent={true} completed={true} />
+                <Task title="Wash Dishes in Kitchen" from="GK" inprogress={true} urgent={true} completed={true} />
               </div>
               <div className="px-6 mb-[8rem] flex flex-col items-center justify-center gap-4">
-                <h3 className="text-white text-lg">Done for the day?</h3>
+                <h3 className="text-zo-primary text-lg">Done for the day?</h3>
                 <button
                   onClick={showDrawer}
-                  className="bg-white font-semibold text-xl px-16 py-4"
+                  className="bg-zo-primary font-semibold text-xl text-zo-stroke px-16 py-4"
                 >
                   End Shift
                 </button>
@@ -63,20 +64,20 @@ export default function Home() {
             </>
           ) : (
             <div className="min-h-[60vh] flex flex-col items-center justify-center gap-4">
-              <h1 className="text-[#67DF48] text-7xl font-bold">21</h1>
-              <p className="text-white text-2xl text-center">Tasks Completed Succesfully</p>
-              <div className="border border-[#5f5f5f] w-full flex flex-col items-center">
+              <h1 className="text-zo-green text-7xl font-bold">21</h1>
+              <p className="text-zo-primary text-2xl text-center">Tasks Completed Succesfully</p>
+              <div className="border border-zo-stroke w-full flex flex-col items-center">
                 <div className="flex items-center justify-start gap-4 p-6 w-full">
-                  <HiOutlineChevronDoubleRight className="text-[#5f5f5f]" />
-                  <p className="text-[#5f5f5f]">
-                    Shift Started at <span className="text-white">8:30 AM</span>
+                  <HiOutlineChevronDoubleRight className="text-zo-secondary" />
+                  <p className="text-zo-secondary">
+                    Shift Started at <span className="text-zo-primary">8:30 AM</span>
                   </p>
                 </div>
-                <div className="w-[80%] border-b border-[#5f5f5f]"></div>
+                <Seprator />
                 <div className="flex items-center justify-start gap-4 p-6 w-full">
-                  <HiOutlineChevronDoubleLeft className="text-[#5f5f5f]" />
-                  <p className="text-[#5f5f5f]">
-                    Shift ended at <span className="text-white">6:20 PM</span>
+                  <HiOutlineChevronDoubleLeft className="text-zo-secondary" />
+                  <p className="text-zo-secondary">
+                    Shift ended at <span className="text-zo-primary">6:20 PM</span>
                   </p>
                 </div>
               </div>
@@ -91,13 +92,13 @@ export default function Home() {
           onClose={onClose}
           open={open}
           closable={false}
-          className={`${spaceGrotesk.className} !bg-[#202020] `}
+          className={`${spaceGrotesk.className} !bg-zo-dark `}
         >
           <div className="flex items-center justify-center my-4">
-            <FaRegHandPeace className="text-4xl text-white" />
+            <FaRegHandPeace className="text-4xl text-zo-primary" />
           </div>
           <div className="my-4 text-center">
-            <h2 className="text-2xl text-white">
+            <h2 className="text-2xl text-zo-primary">
               Do you want to end your shift?
             </h2>
           </div>
@@ -105,14 +106,15 @@ export default function Home() {
             <button
               onClick={() => {
                 setWorking(false);
+                onClose()
               }}
-              className="bg-white w-full font-semibold text-xl px-16 py-4"
+              className="bg-zo-primary w-full font-semibold text-xl px-16 py-4 text-zo-stroke"
             >
               Yes, End Shift
             </button>
             <button
-              onClick={showDrawer}
-              className="bg-transparent border border-white text-white w-full font-semibold text-xl px-16 py-4"
+              onClick={onClose}
+              className="bg-transparent border border-zo-primary text-zo-primary w-full font-semibold text-xl px-16 py-4"
             >
               No, Continue Shift
             </button>
