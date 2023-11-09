@@ -2,7 +2,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 const UnlockDoor = () => {
-  const [unlockDoor, setUnlockDoor] = useState(false);
+  const [unlockDoor, setUnlockDoor] = useState<boolean>(false);
   const unlockDoorFunc = () => {
     setUnlockDoor(true);
   };

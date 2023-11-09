@@ -1,16 +1,15 @@
+import { ProofOfWorkProps } from "@/types/proofOfWork";
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 
-const ProofOfWork = (props: any) => {
+const ProofOfWork : React.FC<ProofOfWorkProps> = (props) => {
     const {setImage, image, id} = props;
-//   const [uplodedPOW, setUplodedPOW] = useState<any>(null);
-//   const [uploadError, setuploadError] = useState<any>(null);
 
-  const uploadProofOfWork = (e: any) => {
-    const file = e.target.files[0];
+  const uploadProofOfWork = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.length ? e.target.files[0] : null;
 
     if (file) {
-      if (file.type && file.type.indexOf("image") === -1) {
+      if (file.type && file.type.indexOf("image") === -1) { // checking if the uploded file is image only
         setImage(null);
         return;
       }

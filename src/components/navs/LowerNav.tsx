@@ -1,8 +1,11 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { LowerNavProps } from "@/types/lowerNav";
 
-const LowerNav = ({ active }: any) => {
+
+
+const LowerNav: React.FC<LowerNavProps> = ({ active }) => {
   return (
     <div className="fixed bottom-0 w-full bg-[#121212] p-6 border-t border-[#202020]">
       <div className="flex w-full gap-6 items-center justify-around text-2xl">

@@ -1,9 +1,5 @@
 import React, { useState } from "react";
 import { Completed, Inprogress, Urgent } from "../badges";
-import { Drawer, Upload } from "antd";
-import { Space_Grotesk } from "next/font/google";
-import { HiArrowLeft } from "react-icons/hi";
-import { LuBed } from "react-icons/lu";
 import Seprator from "../separator";
 // import Image from "next/image";
 import "node_modules/video-react/dist/video-react.css";
@@ -12,16 +8,17 @@ import Image from "next/image";
 import Button from "../buttons";
 import Laundry from "../proofOfWork";
 import ProofOfWork from "../proofOfWork/ProofOfWork";
-const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] });
+import Drawer from "../Drawer";
+import { TaskType } from "@/types/task";
 
-const Task = (props: any) => {
+const Task : React.FC<TaskType> = (props) => {
   const { urgent, inprogress, completed, title, from } = props;
-  const [openTaskInfo, setOpenTaskInfo] = useState(false);
+  const [openTaskInfo, setOpenTaskInfo] = useState<boolean>(false);
   const [uplodedProof, setuplodedProof] = useState<any>(null);
-  const [pickUpClothCount, setPickUpClothCount] = useState(0);
-  const [uplodedPickedLaundry, setuplodedPickedLaundry] = useState<any>(null);
-  const [dropClothCount, setDropClothCount] = useState(0);
-  const [uplodedDropLaundry, setuplodedDropLaundry] = useState<any>(null);
+  const [pickUpClothCount, setPickUpClothCount] = useState<number>(0);
+  const [dropClothCount, setDropClothCount] = useState<number>(0);
+  const [uplodedPickedLaundry, setuplodedPickedLaundry] = useState<any>(null); // need help
+  const [uplodedDropLaundry, setuplodedDropLaundry] = useState<any>(null); // need help in types
 
 
   const closeTaskInfo = () => {
@@ -57,16 +54,8 @@ const Task = (props: any) => {
           </div>
         </div>
       </div>
-      <Drawer
-        placement={"bottom"}
-        width={500}
-        onClose={closeTaskInfo}
-        open={openTaskInfo}
-        height={"100vh"}
-        closable={false}
-        destroyOnClose={true}
-        className={`${spaceGrotesk.className} !bg-zo-dark`}
-      >
+
+      <Drawer isOpen={openTaskInfo} onClose={closeTaskInfo} className="max-h-screen " >
         <div className="flex items-center justify-between w-full mt-12 lg:mt-0">
           <div className="h-8 w-8 relative" onClick={() => closeTaskInfo()}>
             <Image src="/assets/svgs/leftArrow.svg" alt="Room" layout="fill" />

@@ -1,25 +1,24 @@
-import React, { useEffect, useState } from "react";
-import { Space_Grotesk } from "next/font/google";
+import React, { useState } from "react";
 import LowerNav from "@/components/navs/LowerNav";
 import Image from "next/image";
 import Seprator from "@/components/separator";
-import { Drawer } from "antd";
+
 import Button from "@/components/buttons";
 import { toast } from "react-toastify";
 import RequestSupply from "@/components/requestSupply";
 import UnlockDoor from "@/components/unlockDoor";
-const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] });
+import Drawer from "@/components/Drawer";
+import { Profile } from "@/types/profile";
+
 
 const Profile = () => {
-  const [showFeedback, setShowFeedback] = useState(false);
-  const [showRequestSupply, setShowRequestSupply] = useState(false);
-  
-
-  
+  const [showFeedback, setShowFeedback] = useState<boolean>(false);
+  const [showRequestSupply, setShowRequestSupply] = useState<boolean>(false);
+  const [profile, setProfile] = useState<Profile | null>(null);
 
   return (
     <main
-      className={`${spaceGrotesk.className} flex items-center justify-center`}
+      className={`font-space-grotesk flex items-center justify-center`}
     >
       <div className="relative min-h-screen pb-[8rem] w-full bg-zo-dark">
         <div className="p-6 my-6 text-center">
@@ -97,14 +96,9 @@ const Profile = () => {
         </div>
 
         <Drawer
-          placement={"bottom"}
-          width={500}
           onClose={() => setShowFeedback(false)}
-          open={showFeedback}
-          height={"100vh"}
-          closable={false}
-          destroyOnClose={true}
-          className={`${spaceGrotesk.className} !bg-zo-dark`}
+          isOpen={showFeedback}
+          className="h-screen "
         >
           <div className="relative flex items-center justify-center w-full mt-12 lg:mt-0">
             <div className="absolute top-1/2 -translate-y-1/2 left-0">
